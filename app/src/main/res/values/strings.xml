@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Insta Dicoding</string>
+    <string name="welcome_title">Welcome to Insta Dicoding,</string>
+    <string name="welcome_subtitle"> Where every post is a snapshot of your lifes journey. Share your stories, passions, and adventures. Lets get started!</string>
+    <string name="label_login">Login</string>
+    <string name="label_sign_up">Register</string>
+    <string name="don_t_have_account">Don\'t have any account?</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_username">Username</string>
+    <string name="dicoding">Dicoding</string>
+    <string name="insta">Insta</string>
+    <string name="action_map">action_map</string>
+    <string name="action_logout">action_logout</string>
+    <string name="story_photos">Story photos</string>
+    <string name="password_validation">"Passwords must be at least 8 characters long. "</string>
+    <string name="add_story">Add Story</string>
+</resources>

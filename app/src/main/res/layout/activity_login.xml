@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    tools:context=".ui.login.LoginActivity"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="32dp">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:trackThickness="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.539"
+                app:indicatorColor="@color/white"
+                app:trackColor="@color/dark_blue"/>
+
+            <LinearLayout
+                android:id="@+id/app_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/insta_dicoding_logo"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/insta"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/dicoding"
+                        android:textColor="@color/dark_blue"
+                        android:layout_marginTop="-4dp"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="360dp"
+                android:src="@drawable/social1"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@id/app_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/tv_login_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_login"
+                android:textSize="24sp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintTop_toBottomOf="@id/iv_login"/>
+            <LinearLayout
+                android:id="@+id/btn_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tv_login_label">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:boxBackgroundColor="@color/light_gray"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeColor="@color/gray"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    android:hint="@string/label_email"
+                    android:textColorHint="@color/gray"
+                    app:hintTextColor="@color/dark_blue"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_login_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/dark_blue" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:boxBackgroundColor="@color/light_gray"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeColor="@color/gray"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/gray"
+                    android:hint="@string/label_password"
+                    android:textColorHint="@color/gray"
+                    app:hintTextColor="@color/dark_blue"
+                    app:errorEnabled="true"
+                    android:layout_marginVertical="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_login_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:inputType="textPassword"
+                        android:textColor="@color/dark_blue" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login_welcome"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/dark_blue"
+                android:fontFamily="@font/quicksand_bold"
+                android:padding="8dp"
+                android:text="@string/label_login"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_container" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

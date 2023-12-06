@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    tools:context=".ui.signup.SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="32dp">
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:indicatorColor="@color/dark_blue"/>
+
+            <LinearLayout
+                android:id="@+id/app_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/insta_dicoding_logo"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/insta"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/dicoding"
+                        android:textColor="@color/dark_blue"
+                        android:layout_marginTop="-4dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/iv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="312dp"
+                android:src="@drawable/social2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/app_logo"  />
+
+            <TextView
+                android:id="@+id/tv_login_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sign_up"
+                android:textColor="@color/dark_blue"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@id/iv_login" />
+
+            <LinearLayout
+                android:id="@+id/btn_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_login_label">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="@string/label_username"
+                    android:textColorHint="@color/gray"
+                    app:boxBackgroundColor="@color/light_gray"
+                    app:boxStrokeColor="@color/gray"
+                    app:boxStrokeWidth="2dp"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/dark_blue"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_register_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/dark_blue" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginVertical="24dp"
+                    android:hint="@string/label_email"
+                    android:textColorHint="@color/gray"
+                    app:boxBackgroundColor="@color/light_gray"
+                    app:boxStrokeColor="@color/gray"
+                    app:boxStrokeWidth="2dp"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/dark_blue"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_register_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/dark_blue" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="@string/label_password"
+                    android:textColorHint="@color/gray"
+                    app:boxBackgroundColor="@color/light_gray"
+                    app:boxStrokeColor="@color/gray"
+                    app:boxStrokeWidth="2dp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/gray"
+                    app:errorEnabled="true"
+                    app:hintTextColor="@color/dark_blue"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_register_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:textColor="@color/dark_blue" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="64dp"
+                android:backgroundTint="@color/dark_blue"
+                android:padding="8dp"
+                android:text="@string/label_sign_up"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/quicksand_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_container" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>
