@@ -17,10 +17,12 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="32dp"
             android:paddingVertical="32dp">
-            <com.google.android.material.progressindicator.CircularProgressIndicator
+            <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progress_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:trackColor="@color/white"
+                android:indeterminate="true"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -14,5 +14,9 @@
     <string name="action_logout">action_logout</string>
     <string name="story_photos">Story photos</string>
     <string name="password_validation">"Passwords must be at least 8 characters long. "</string>
-    <string name="add_story">Add Story</string>
+    <string name="add_story">Create a Post</string>
+    <string name="detail_story">Detail Story</string>
+    <string name="gallery">Gallery</string>
+    <string name="write_post_desription_here">Write desription here!</string>
+    <string name="upload_story">Upload</string>
 </resources>

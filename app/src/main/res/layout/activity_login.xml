@@ -19,19 +19,20 @@
             android:paddingHorizontal="32dp"
             android:paddingVertical="32dp">
 
-            <com.google.android.material.progressindicator.CircularProgressIndicator
+            <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progress_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:trackThickness="4dp"
+                android:indeterminate="true"
+                app:trackColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.539"
-                app:indicatorColor="@color/white"
-                app:trackColor="@color/dark_blue"/>
+                app:indicatorColor="@color/dark_blue" />
 
             <LinearLayout
                 android:id="@+id/app_logo"

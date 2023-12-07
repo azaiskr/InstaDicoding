@@ -19,13 +19,13 @@ class OnBoardActivity : AppCompatActivity() {
         binding.btnLoginWelcome.setOnClickListener {
             val intentLogin = Intent(this, LoginActivity::class.java)
             startActivity(intentLogin)
-            finish()
+
         }
 
         binding.materialButtonSignUp.setOnClickListener {
             val intentSignUp = Intent(this, SignUpActivity::class.java)
             startActivity(intentSignUp)
-            finish()
+
         }
     }
 

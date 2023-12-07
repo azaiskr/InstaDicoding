@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="8dp"
+    android:paddingTop="16dp"
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/item_story"
-        style="@style/Widget.Material3.CardView.Elevated"
+        style="@style/Widget.Material3.CardView.Filled"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="@color/light_gray"
+        app:cardBackgroundColor="@color/dark_blue"
         app:cardCornerRadius="16dp">
 
         <LinearLayout
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/quicksand_bold"
-                android:textColor="@color/dark_blue"
+                android:textColor="@color/white"
                 android:paddingHorizontal="16dp"
                 android:paddingTop="8dp"
                 android:textSize="16sp"
@@ -46,7 +46,7 @@
                 android:fontFamily="@font/quicksand_medium"
                 android:paddingHorizontal="16dp"
                 android:maxLines="1"
-                android:textColor="@color/dark_blue"
+                android:textColor="@color/white"
                 android:ellipsize="end"
                 android:textSize="12sp"
                 android:layout_marginBottom="16dp"

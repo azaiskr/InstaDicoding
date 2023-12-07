@@ -17,7 +17,7 @@ class LoginViewModel(private val repository: AppRepository):ViewModel() {
 
     fun login(email: String, password: String){
         viewModelScope.launch {
-            repository.login(email, password).collect(){
+            repository.login(email, password).collect{
                 _loginResult.value = it
             }
         }

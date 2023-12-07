@@ -72,11 +72,11 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val intent = Intent(this, OnBoardActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
+//    @Deprecated("Deprecated in Java")
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//        val intent = Intent(this, OnBoardActivity::class.java)
+//        startActivity(intent)
+//        finish()
+//    }
 }
