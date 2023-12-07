@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.bangkit.instadicoding.R
 import com.bangkit.instadicoding.databinding.ActivityLoginBinding
 import com.bangkit.instadicoding.ui.main.MainActivity
 import com.bangkit.instadicoding.ui.welcome.OnBoardActivity
@@ -62,14 +61,13 @@ class LoginActivity : AppCompatActivity() {
 
                 is State.Success -> {
                     showLoading(false)
-                    showToast(getString(R.string.login_success))
+                    showToast("Welcome ${it.data.name} ") //recheck
                     viewModel.saveSession(it.data)
 
                     val intent = Intent(this, MainActivity::class.java)
 //                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(intent)
                     finish()
-                    //finish()
                 }
 
                 is State.Error -> {

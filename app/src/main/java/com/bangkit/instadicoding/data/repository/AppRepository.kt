@@ -11,12 +11,9 @@ import com.bangkit.instadicoding.data.StoryRemoteMediator
 import com.bangkit.instadicoding.data.database.StoriesDatabase
 import com.bangkit.instadicoding.data.preference.UserPreferences
 import com.bangkit.instadicoding.data.remote.api.ApiService
-import com.bangkit.instadicoding.data.remote.response.ErrorResponse
 import com.bangkit.instadicoding.data.remote.response.ListStoryItem
 import com.bangkit.instadicoding.data.remote.response.LoginResult
-import com.bangkit.instadicoding.data.remote.response.RegisterResponse
 import com.bangkit.instadicoding.utils.State
-import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
