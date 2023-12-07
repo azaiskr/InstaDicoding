@@ -36,7 +36,7 @@ class DetailStory : AppCompatActivity() {
         data?.let {
             binding.apply {
                 tvUsernameDetail.text = it.name
-                tvDescDetail.text = it.description
+                tvDescDetail.text= it.description
                 Glide.with(this@DetailStory)
                     .load(it.photoUrl)
                     .into(ivStoryDetail)

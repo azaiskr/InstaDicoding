@@ -12,6 +12,18 @@
         android:layout_margin="16dp"
         android:paddingBottom="32dp">
 
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btnGalery"
+            app:layout_constraintBottom_toTopOf="@id/post_desc"
+            app:trackThickness="4dp"
+            android:visibility="gone"
+            app:trackColor="@color/white"
+            app:indicatorColor="@color/dark_blue"
+            />
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_content"
             android:layout_width="match_parent"
@@ -24,7 +36,7 @@
             app:shapeAppearance="@style/rounded5"/>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/btn_camera"
+            android:id="@+id/btnCamera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/green_blue"
@@ -33,11 +45,11 @@
             app:iconSize="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toStartOf="@id/btn_galery"
+            app:layout_constraintEnd_toStartOf="@id/btnGalery"
             app:layout_constraintTop_toBottomOf="@id/iv_content"/>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/btn_galery"
+            android:id="@+id/btnGalery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:icon="@drawable/gallery_thumbnail"
@@ -64,11 +76,11 @@
             android:hint="@string/write_post_desription_here"
             android:textColorHint="@color/gray"
             app:hintTextColor="@color/dark_blue"
-            app:layout_constraintTop_toBottomOf="@id/btn_galery"
+            app:layout_constraintTop_toBottomOf="@id/btnGalery"
             android:layout_marginTop="32dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ed_post_desc"
+                android:id="@+id/edPostDesc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/quicksand_medium"

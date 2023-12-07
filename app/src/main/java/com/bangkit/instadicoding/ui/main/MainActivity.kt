@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.getSession().observe(this) { loginResult ->
             if (loginResult.token == "") {
                 val intentWelcome = Intent(this, OnBoardActivity::class.java)
+//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intentWelcome)
                 finish()
             }
@@ -71,9 +72,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_map -> {
-                Toast.makeText(this, "Action Map", Toast.LENGTH_SHORT).show()
-            }
+//            R.id.action_map -> {
+//                Toast.makeText(this, "Action Map", Toast.LENGTH_SHORT).show()
+//            }
 
             R.id.action_logout -> {
                 Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show()
@@ -88,6 +89,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PostStory::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        getStories()
     }
 
 }

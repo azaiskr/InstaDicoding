@@ -41,7 +41,7 @@
             tools:text="@string/label_username" />
 
         <TextView
-            android:id="@+id/tv_desc_detail"
+            android:id="@+id/tvDescDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"

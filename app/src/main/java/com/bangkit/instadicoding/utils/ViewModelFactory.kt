@@ -8,6 +8,7 @@ import com.bangkit.instadicoding.di.Inject
 import com.bangkit.instadicoding.ui.login.LoginViewModel
 import com.bangkit.instadicoding.ui.main.MainViewModel
 import com.bangkit.instadicoding.ui.signup.SignUpViewModel
+import com.bangkit.instadicoding.ui.story.PostStoryViewModel
 
 class ViewModelFactory(private val repository: AppRepository): ViewModelProvider.NewInstanceFactory() {
 
@@ -22,6 +23,9 @@ class ViewModelFactory(private val repository: AppRepository): ViewModelProvider
             }
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(PostStoryViewModel::class.java) -> {
+                PostStoryViewModel(repository) as T
             }
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

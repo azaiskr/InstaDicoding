@@ -45,7 +45,7 @@ class StoryListAdapter :
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoryListAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = StoryItemBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
