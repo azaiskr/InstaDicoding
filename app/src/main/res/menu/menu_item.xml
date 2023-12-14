@@ -2,12 +2,11 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-<!--    <item-->
-<!--        android:id="@+id/action_map"-->
-<!--        android:enabled="false"-->
-<!--        android:icon="@drawable/rounded_map_24"-->
-<!--        android:title="@string/action_map"-->
-<!--        app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/action_map"
+        android:icon="@drawable/rounded_map_24"
+        android:title="@string/action_map"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_logout"
         android:icon="@drawable/rounded_logout"

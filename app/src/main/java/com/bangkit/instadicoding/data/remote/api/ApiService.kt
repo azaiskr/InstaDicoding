@@ -41,6 +41,12 @@ interface ApiService {
     suspend fun createPost(
         @Part file: MultipartBody.Part,
         @Part("description") description : RequestBody,
+        @Part("lat") lat : Double?,
+        @Part("lon") lon : Double?,
     ): RegisterResponse
 
+    @GET("stories")
+    suspend fun getStoriesLocation(
+        @Query("location") location: Int,
+    ): StoriesResponse
 }

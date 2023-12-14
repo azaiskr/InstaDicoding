@@ -23,4 +23,12 @@
     <string name="please_select_an_image">Please select an image</string>
     <string name="login_success">Login Success</string>
     <string name="register_success">Register Success</string>
+    <string name="error_msg">Timeout</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+    <string name="location">Location</string>
+    <string name="try_again">Try Again</string>
 </resources>

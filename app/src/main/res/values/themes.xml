@@ -1,11 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.InstaDicoding" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="actionBarStyle">@style/customActionBar</item>
         <item name="android:statusBarColor">@color/dark_blue</item>
-
     </style>
 
     <style name="customActionBar" parent="@style/Widget.MaterialComponents.ActionBar.Primary">
@@ -13,6 +12,8 @@
         <item name="android:textColor">@color/white</item>
         <item name="iconTint">@color/white</item>
         <item name="titleTextStyle">@style/appBarCustomTitle</item>
+        <item name="popupMenuBackground">@color/dark_blue</item>
+        <item name="textFillColor">@color/white</item>
     </style>
 
 

@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -51,9 +52,6 @@ dependencies {
     //image - glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    //parcelize
-
-
     //api - retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -77,7 +75,17 @@ dependencies {
 
     //database
     implementation("androidx.room:room-ktx:2.6.1")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
     kapt("androidx.room:room-compiler:2.6.1")
+
+    //maps
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+
+    //TESTING-mockito
+    testImplementation ("org.mockito:mockito-core:5.5.0")
+    testImplementation ("org.mockito:mockito-inline:5.2.0")
+    testImplementation("androidx.arch.core:core-testing:2.2.0") // InstantTaskExecutorRule
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1") //TestDispatcher
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

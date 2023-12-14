@@ -79,7 +79,12 @@ class AppRepository private constructor(
     }
 
     //STORY - create post
-    fun createPost(imageFile: File, description: String ) = liveData {
+    fun createPost(
+        imageFile: File,
+        description: String,
+        latitude: Double?,
+        longitude: Double?,
+    ) = liveData {
         emit(State.Loading)
         val requestBody = description.toRequestBody("text/plain".toMediaType())
         val requestImageFile = imageFile.asRequestBody("image/jpeg".toMediaType())
@@ -90,8 +95,19 @@ class AppRepository private constructor(
         )
 
         try {
-            val successResponse = apiService.createPost(multipartBody, requestBody)
+            val successResponse = apiService.createPost(multipartBody, requestBody, latitude, longitude)
             emit(State.Success(successResponse))
+        } catch (e: Exception){
+            emit(State.Error(e.message))
+        }
+    }
+
+    //STORY - get with location
+    fun getStoriesLocation(location: Int) = liveData {
+        emit(State.Loading)
+        try {
+            val successResponse = apiService.getStoriesLocation(location)
+            emit(State.Success(successResponse.listStory))
         } catch (e: Exception){
             emit(State.Error(e.message))
         }

@@ -7,6 +7,7 @@ import com.bangkit.instadicoding.data.repository.AppRepository
 import com.bangkit.instadicoding.di.Inject
 import com.bangkit.instadicoding.ui.login.LoginViewModel
 import com.bangkit.instadicoding.ui.main.MainViewModel
+import com.bangkit.instadicoding.ui.maps.MapsViewModel
 import com.bangkit.instadicoding.ui.signup.SignUpViewModel
 import com.bangkit.instadicoding.ui.story.PostStoryViewModel
 
@@ -27,7 +28,9 @@ class ViewModelFactory(private val repository: AppRepository): ViewModelProvider
             modelClass.isAssignableFrom(PostStoryViewModel::class.java) -> {
                 PostStoryViewModel(repository) as T
             }
-
+            modelClass.isAssignableFrom(MapsViewModel::class.java) -> {
+                MapsViewModel(repository) as T
+            }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }

@@ -12,6 +12,8 @@ import com.bangkit.instadicoding.R
 import com.bangkit.instadicoding.data.remote.response.ListStoryItem
 import com.bangkit.instadicoding.databinding.ActivityMainBinding
 import com.bangkit.instadicoding.ui.adapter.StoryListAdapter
+import com.bangkit.instadicoding.ui.adapter.StoryLoadAdapter
+import com.bangkit.instadicoding.ui.maps.MapsActivity
 import com.bangkit.instadicoding.ui.story.DetailStory
 import com.bangkit.instadicoding.ui.story.PostStory
 import com.bangkit.instadicoding.ui.welcome.OnBoardActivity
@@ -42,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         viewModel.getSession().observe(this) { loginResult ->
             if (loginResult.token == "") {
                 val intentWelcome = Intent(this, OnBoardActivity::class.java)
-//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intentWelcome)
                 finish()
             }
@@ -51,7 +52,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun getStories() {
         val adapter = StoryListAdapter()
-        binding.rvStories.adapter = adapter
+        binding.rvStories.adapter = adapter.withLoadStateFooter(
+            footer = StoryLoadAdapter{
+                adapter.retry()
+            }
+        )
         viewModel.story.observe(this) {
             adapter.submitData(lifecycle, it)
         }
@@ -72,9 +77,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-//            R.id.action_map -> {
-//                Toast.makeText(this, "Action Map", Toast.LENGTH_SHORT).show()
-//            }
+            R.id.action_map -> {
+                val intent = Intent(this, MapsActivity::class.java)
+                startActivity(intent)
+            }
 
             R.id.action_logout -> {
                 Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show()
