@@ -17,10 +17,13 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="32dp"
             android:paddingVertical="32dp">
-            <com.google.android.material.progressindicator.CircularProgressIndicator
-                android:id="@+id/progress_indicator"
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressIndicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:trackColor="@color/white"
+                android:indeterminate="true"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +43,8 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/insta_dicoding_logo"/>
+                    android:src="@drawable/insta_dicoding_logo"
+                    android:importantForAccessibility="no" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -71,16 +75,21 @@
                 android:id="@+id/iv_login"
                 android:layout_width="wrap_content"
                 android:layout_height="312dp"
+                android:alpha="0"
+                tools:alpha="1"
                 android:src="@drawable/social2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/app_logo"  />
+                app:layout_constraintTop_toBottomOf="@id/app_logo"
+                android:importantForAccessibility="no" />
 
             <TextView
                 android:id="@+id/tv_login_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_sign_up"
+                android:alpha="0"
+                tools:alpha="1"
                 android:textColor="@color/dark_blue"
                 android:fontFamily="@font/quicksand_bold"
                 android:textSize="24sp"
@@ -99,10 +108,12 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_login_label">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ti_username"
+                    android:id="@+id/input_username"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:hint="@string/label_username"
+                    android:alpha="0"
+                    tools:alpha="1"
                     android:textColorHint="@color/gray"
                     app:boxBackgroundColor="@color/light_gray"
                     app:boxStrokeColor="@color/gray"
@@ -113,7 +124,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/ed_register_name"
+                        android:id="@+id/edRegisterName"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/quicksand_medium"
@@ -122,11 +133,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ti_email"
+                    android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginVertical="24dp"
                     android:hint="@string/label_email"
+                    android:alpha="0"
+                    tools:alpha="1"
                     android:textColorHint="@color/gray"
                     app:boxBackgroundColor="@color/light_gray"
                     app:boxStrokeColor="@color/gray"
@@ -136,8 +149,8 @@
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
                     >
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/ed_register_email"
+                    <com.bangkit.instadicoding.ui.customView.EmailEditText
+                        android:id="@+id/edRegisterEmail"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/quicksand_medium"
@@ -146,7 +159,9 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/ti_password"
+                    android:id="@+id/input_paddword"
+                    android:alpha="0"
+                    tools:alpha="1"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:hint="@string/label_password"
@@ -160,8 +175,8 @@
                     app:hintTextColor="@color/dark_blue"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/ed_register_password"
+                    <com.bangkit.instadicoding.ui.customView.PasswordEditText
+                        android:id="@+id/edRegisterPassword"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="textPassword"
@@ -171,13 +186,15 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_register"
+                android:id="@+id/btnRegister"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="64dp"
                 android:backgroundTint="@color/dark_blue"
                 android:padding="8dp"
+                android:alpha="0"
+                tools:alpha="1"
                 android:text="@string/label_sign_up"
                 android:textColor="@color/white"
                 android:textSize="16sp"

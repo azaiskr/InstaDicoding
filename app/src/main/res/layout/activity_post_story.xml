@@ -1,9 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.story.PostStory">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:paddingBottom="32dp">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:indeterminate="true"
+            app:indicatorColor="@color/dark_blue"
+            app:trackColor="@color/white"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnGalery"
+            android:layout_marginTop="16dp"/>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_content"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/rounded5"/>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/green_blue"
+            app:icon="@drawable/photo_camera"
+            app:iconTint="@color/white"
+            app:iconSize="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@id/btnGalery"
+            app:layout_constraintTop_toBottomOf="@id/iv_content"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btnGalery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/gallery_thumbnail"
+            app:iconSize="32dp"
+            android:text="@string/gallery"
+            app:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_blue"
+
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_content">
+
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/location_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/location"
+            android:fontFamily="@font/quicksand_bold"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/post_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/light_gray"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="@color/gray"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+            android:hint="@string/write_post_desription_here"
+            android:textColorHint="@color/gray"
+            app:hintTextColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@id/location_switch">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edPostDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="@color/dark_blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpload"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/upload_story"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@id/post_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

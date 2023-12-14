@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/dark_blue"
         app:srcCompat="@drawable/bg_dicoding"
-        />
+        android:importantForAccessibility="no" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,6 +33,8 @@
             android:layout_height="wrap_content"
             android:text="@string/welcome_title"
             android:textAlignment="center"
+            android:alpha="0"
+            tools:alpha="1"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -47,6 +49,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:alpha="0"
+            tools:alpha="1"
             android:paddingHorizontal="16dp"
             android:text="@string/welcome_subtitle"
             android:textAlignment="center"
@@ -60,17 +64,21 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:alpha="1"
             android:src="@drawable/insta_dicoding"
             app:layout_constraintBottom_toTopOf="@id/btn_login_welcome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcome_subtitle" />
+            app:layout_constraintTop_toBottomOf="@id/welcome_subtitle"
+            android:importantForAccessibility="no" />
 
         <Button
             android:id="@+id/btn_login_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
+            android:alpha="0"
+            tools:alpha="1"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/white"
             android:text="@string/label_login"
@@ -90,6 +98,8 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="14sp"
+            android:alpha="0"
+            tools:alpha="1"
             android:fontFamily="@font/quicksand_medium"
             app:layout_constraintBottom_toTopOf="@+id/materialButtonSignUp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +113,8 @@
             android:text="@string/label_sign_up"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:alpha="0"
+            tools:alpha="1"
             android:textStyle="bold"
             android:fontFamily="@font/quicksand_bold"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -14,5 +14,21 @@
     <string name="action_logout">action_logout</string>
     <string name="story_photos">Story photos</string>
     <string name="password_validation">"Passwords must be at least 8 characters long. "</string>
-    <string name="add_story">Add Story</string>
+    <string name="add_story">Create a Post</string>
+    <string name="create">Create</string>
+    <string name="detail_story">Detail Story</string>
+    <string name="gallery">Gallery</string>
+    <string name="write_post_desription_here">Write desription here!</string>
+    <string name="upload_story">Upload</string>
+    <string name="please_select_an_image">Please select an image</string>
+    <string name="login_success">Login Success</string>
+    <string name="register_success">Register Success</string>
+    <string name="error_msg">Timeout</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+    <string name="location">Location</string>
+    <string name="try_again">Try Again</string>
 </resources>

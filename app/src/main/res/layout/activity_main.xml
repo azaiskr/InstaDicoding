@@ -10,22 +10,22 @@
 <!--    <include layout="@layout/app_top_bar"/>-->
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/post_story"
+        android:id="@+id/postStory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginVertical="24dp"
         android:layout_marginHorizontal="24dp"
-        android:backgroundTint="@color/dark_blue"
+        android:backgroundTint="@color/green_blue"
         app:icon="@drawable/rounded_add"
         app:iconTint="@color/white"
-        android:text="@string/add_story"
+        android:text="@string/create"
         android:verticalScrollbarPosition="defaultPosition"
         android:fontFamily="@font/quicksand_medium"
         android:textColor="@color/white"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_stories"
+        android:id="@+id/rvStories"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/story_item"/>
